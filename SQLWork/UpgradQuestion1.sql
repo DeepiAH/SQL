@@ -4,10 +4,9 @@ Sample Output
 #Full_name
 #PENELOPE GUINESS
 '''
-use upgrad;
-SELECT concat(First_Name, ' ',Last_Name)
+SELECT concat(First_Name, ' ',Last_Name) AS Full_name
 FROM Actor AS ac
-INNER JOIN FILM_ACTOR AS fc
+INNER JOIN FILM_ACTOR as fc
 ON ac.Actor_id=fc.Actor_id
 WHERE fc.FILM_ID=(
                  SELECT max(FILM_ID)
